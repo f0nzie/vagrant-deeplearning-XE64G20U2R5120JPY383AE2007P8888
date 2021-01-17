@@ -5,7 +5,7 @@ VAGRANT_EXPERIMENTAL="disks"
 Vagrant.configure("2") do |config|
   # Config
   config.vm.box = "ubuntu/xenial64"
-  config.vm.hostname = "data-science-box"
+  config.vm.hostname = "XE64G20U2R5120JPY383AE2007P8888"
   # config.vm.provider :virtualbox
   #!  Requires   $ vagrant plugin install vagrant-disksize   from host
   config.disksize.size = '20GB'
@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 config.vm.provider "virtualbox" do |vm|
     vm.cpus   = 2
     vm.memory = 5120
-    vm.name   = "XE64G20U2R5120JPY383AE2007P8888"
+    vm.name   = "vagrant-XE64G20U2R5120JPY383AE2007P8888"
 end  
 
   # Port forwarding
