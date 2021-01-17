@@ -10,8 +10,15 @@ Vagrant.configure("2") do |config|
   #!  Requires   $ vagrant plugin install vagrant-disksize   from host
   config.disksize.size = '20GB'
 
+config.vm.provider "virtualbox" do |vm|
+    vm.cpus   = 2
+    vm.memory = 5120
+    vm.name   = "XE64G10U2R4096JPY373A1903P8888"
+end  
+
   # Port forwarding
   config.vm.network "forwarded_port", guest: 8888, host: 8888
+  config.vm.network "forwarded_port", guest: 8000, host: 8000
 
   # Provisioning
   config.vm.provision :shell, path: "scripts/provision-vagrant.sh"
@@ -23,6 +30,7 @@ Vagrant.configure("2") do |config|
                               "    To access your Jupyter Notebook\n" \
                               "    point your browser to:\n\n" \
                               "        http://localhost:8888\n\n" \
+                              "        http://localhost:8000\n\n" \
                               "    Have fun!\n\n" \
                               "*****************************************"
 end
