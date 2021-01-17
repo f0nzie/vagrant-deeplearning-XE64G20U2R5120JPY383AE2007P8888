@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 config.vm.provider "virtualbox" do |vm|
     vm.cpus   = 2
     vm.memory = 5120
-    vm.name   = "XE64G10U2R4096JPY373A1903P8888"
+    vm.name   = "XE64G20U2R5120JPY383AE2007P8888"
 end  
 
   # Port forwarding
